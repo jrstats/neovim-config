@@ -6,15 +6,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
--- vim-slime
-vim.g.slime_target = "tmux"
-vim.g.slime_bracketed_paste = 1 -- If using IPython
-vim.g.slime_default_config = {
-  socket_name = "default",
-  target_pane = "{right-of}", -- Adjust based on your tmux layout
-}
-vim.g.slime_dont_ask_default = 1 -- Don't ask for config every time
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -22,6 +13,7 @@ require("lazy").setup({
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.python-semshi" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
@@ -36,7 +28,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "catppuccin" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
