@@ -6,6 +6,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+-- vim-slime
+vim.g.slime_target = "tmux"
+vim.g.slime_bracketed_paste = 1 -- If using IPython
+vim.g.slime_default_config = {
+  socket_name = "default",
+  target_pane = "{right-of}", -- Adjust based on your tmux layout
+}
+vim.g.slime_dont_ask_default = 1 -- Don't ask for config every time
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
