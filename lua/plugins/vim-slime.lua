@@ -2,9 +2,10 @@ return {
   {
     "jpalardy/vim-slime",
     keys = {
-      { "<C-C>c", "<Plug>SlimeSendCell<BAR>/^# %%<CR>", desc = "Slime Send Cell" },
-      { "<C-C><C-C>", "<Plug>SlimeParagraphSend<CR>", desc = "Slime Send Paragraph" },
-      { "<C-C>i", "<Esc>o# %%<CR><Esc>c$", desc = "Create new cell" },
+      { "<C-C>c", "<Plug>SlimeSendCell<BAR>/^# %%<CR><CR>", desc = "Slime Send Cell" },
+      { "<C-C><C-C>", "<Plug>SlimeParagraphSend<CR><CR>", desc = "Slime Send Paragraph" },
+      { "<C-C>l", "<Plug>SlimeSendCurrentLine<CR><CR>", desc = "Slime Send Line" },
+      { "<C-C>i", "<Esc>o<Esc>0Do<Esc>0Do# %%<CR><Esc>c$", desc = "Create new cell" },
     },
     config = function()
       vim.g.slime_cell_delimiter = "^# %%"
