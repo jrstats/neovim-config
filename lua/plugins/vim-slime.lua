@@ -4,7 +4,7 @@ return {
     keys = {
       { "<C-C>c", "<Plug>SlimeSendCell<BAR>/^# %%<CR><CR>", desc = "Slime Send Cell" },
       { "<C-C><C-C>", "<Plug>SlimeParagraphSend<CR><CR>", desc = "Slime Send Paragraph" },
-      { "<C-C>l", "<Plug>SlimeSendCurrentLine<CR><CR>", desc = "Slime Send Line" },
+      { "<C-C>l", "<Plug>SlimeLineSend<CR><CR>", desc = "Slime Send Line" },
       { "<C-C>i", "<Esc>o<Esc>0Do<Esc>0Do# %%<CR><Esc>c$", desc = "Create new cell" },
     },
     config = function()
