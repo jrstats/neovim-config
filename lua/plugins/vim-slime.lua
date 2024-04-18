@@ -6,8 +6,8 @@ return {
       { "<C-C>c", string.format("<Plug>SlimeSendCell<BAR>/%s<CR><CR>", delimiter), desc = "Slime Send Cell" },
       { "<C-C><C-C>", "<Plug>SlimeParagraphSend<CR><CR>", desc = "Slime Send Paragraph" },
       { "<C-C>l", "<Plug>SlimeLineSend<CR><CR>", desc = "Slime Send Line" },
-      { "<C-C>i", "<Esc>o<Esc>0Do<Esc>0Do# %%<CR><Esc>c$", desc = "Create new cell (below current line)" },
-      { "<C-C>I", "<Esc>O<Esc>0Do<Esc>0Do# %%<CR><Esc>c$", desc = "Create new cell (above current line)" },
+      { "<C-C>i", "<Esc>2o<Esc>i# %%<Esc>F#d0o<Esc>0C", desc = "Create new cell (below current line)" },
+      { "<C-C><C-I>", "<Esc>2O<Esc>ki# %%<Esc>F#d0o<Esc>0C", desc = "Create new cell (above current line)" },
     },
     config = function()
       vim.g.slime_cell_delimiter = delimiter
