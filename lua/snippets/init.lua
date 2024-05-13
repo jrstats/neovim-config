@@ -24,8 +24,9 @@ ls.add_snippets("python", {
 ls.add_snippets("python", {
   s(
     "filter",
-    fmt([[filter(pl.col("{}"))]], {
-      i(0),
+    fmt([[filter(pl.col("{}"){})]], {
+      i(1),
+      i(2),
     })
   ),
 })
