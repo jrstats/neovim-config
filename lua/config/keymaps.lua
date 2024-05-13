@@ -10,3 +10,4 @@ vim.api.nvim_set_keymap(
   ":e ./playground/test.py<CR>",
   { desc = "Create a new buffer with a new python file in the playground folder" }
 )
+vim.api.nvim_set_keymap("n", "<Leader>cL", ":LspStop<CR>:LspStart<CR>", { desc = "Restart the LSP" })
