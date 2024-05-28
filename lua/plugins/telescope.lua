@@ -27,5 +27,17 @@ return {
       end,
       desc = "Search for playground files",
     },
+    {
+      "<leader>fs",
+      function()
+        require("telescope.builtin").find_files({
+          prompt_title = "Search for nvim swap files",
+          cwd = string.format("~/.local/share/nvim/swap"),
+          file_ignore_patterns = {},
+          no_ignore = true,
+        })
+      end,
+      desc = "Search for nvim swap files",
+    },
   },
 }
