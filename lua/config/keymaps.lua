@@ -7,7 +7,7 @@ vim.api.nvim_set_keymap("n", "J", "Vj", { desc = "Select next line in visual blo
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>bnp",
-  ":e ./playground/test.py<CR>",
-  { desc = "Create a new buffer with a new python file in the playground folder" }
+  ":e ./playground/",
+  { desc = "Create a new buffer with a new file in the playground folder" }
 )
 vim.api.nvim_set_keymap("n", "<Leader>cL", ":LspStop<CR>:LspStart<CR>", { desc = "Restart the LSP" })
