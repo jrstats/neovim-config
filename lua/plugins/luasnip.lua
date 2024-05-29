@@ -36,7 +36,7 @@ return {
   end,
   keys = {
     {
-      "<C-k>",
+      "<A-n>",
       function()
         local ls = require("luasnip")
         if ls.expand_or_jumpable() then
@@ -47,7 +47,7 @@ return {
       desc = "Expand or jump to the next snippet",
     },
     {
-      "<C-j>",
+      "<A-p>",
       function()
         local ls = require("luasnip")
         if ls.jumpable(-1) then
@@ -58,7 +58,7 @@ return {
       desc = "Jump backward through snippets",
     },
     {
-      "<C-l>",
+      "<A-l>",
       function()
         local ls = require("luasnip")
         if ls.choice_active() then
