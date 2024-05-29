@@ -16,6 +16,30 @@ return {
       desc = "Search for dotenv files",
     },
     {
+      "<leader>ft",
+      function()
+        require("telescope.builtin").find_files({
+          prompt_title = "Search for tmp_local files",
+          cwd = string.format("%s/tmp_local", vim.fn.getcwd()),
+          file_ignore_patterns = {},
+          no_ignore = true,
+        })
+      end,
+      desc = "Search for tmp_local files",
+    },
+    {
+      "<leader>fT",
+      function()
+        require("telescope.builtin").find_files({
+          prompt_title = "Search for tmp_local/storage_assets files",
+          cwd = string.format("%s/tmp_local/storage_assets", vim.fn.getcwd()),
+          file_ignore_patterns = {},
+          no_ignore = true,
+        })
+      end,
+      desc = "Search for tmp_local/storage_assets files",
+    },
+    {
       "<leader>fp",
       function()
         require("telescope.builtin").find_files({
