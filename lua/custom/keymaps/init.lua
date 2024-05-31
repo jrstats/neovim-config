@@ -15,4 +15,6 @@ return {
 		{ desc = "Delete the file of the current buffer" }
 	),
 	vim.api.nvim_set_keymap("n", "<Leader>cL", ":LspStop<CR>:LspStart<CR>", { desc = "Restart the [L]SP" }),
+	vim.api.nvim_set_keymap("n", "<Leader>ll", ":Lazy<CR>", { desc = "Load [L]azy" }),
+	vim.api.nvim_set_keymap("n", "<Leader>bd", "<CMD>bd<CR>", { desc = "[D]elete buffer" }),
 }
