@@ -1,7 +1,7 @@
 return {
-	vim.api.nvim_set_keymap("n", "<Leader>qw", ":mksession!<CR>:qa<CR>", { desc = "Save the session, then quit." }),
 	vim.api.nvim_set_keymap("n", "Q", "@qj", { desc = "Apply the 'q' macro and move to the next line" }),
 	vim.api.nvim_set_keymap("n", "J", "Vj", { desc = "Select next line in visual block mode" }),
+	vim.api.nvim_set_keymap("v", "J", "j", { desc = "Select next line in visual block mode" }),
 	vim.api.nvim_set_keymap(
 		"n",
 		"<Leader>bnp",
