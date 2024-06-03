@@ -11,17 +11,17 @@ return {
 		{
 			"<leader>qs",
 			[[<cmd>lua require("persistence").load()<cr>]],
-			desc = "Restore the session for the current directory",
+			desc = "Restore the [s]aved session for the current directory",
 		},
 		{
 			"<leader>ql",
 			[[<cmd>lua require("persistence").load({ last = true })<cr>]],
-			desc = "Restore the last session",
+			desc = "Restore the [l]ast session",
 		},
 		{
 			"<leader>qd",
 			[[<cmd>lua require("persistence").stop()<cr>]],
-			desc = "Stop Persistence => session won't be saved on exit",
+			desc = "Stop Persistence => [d]on't save the session on exit",
 		},
 	},
 	init = function()
