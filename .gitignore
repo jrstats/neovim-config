@@ -7,7 +7,6 @@ foo.*
 *.log
 data
 venv
-lazy-lock.json
 .luarc.json
 test.sh
 Session.vim
