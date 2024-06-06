@@ -159,6 +159,7 @@ vim.opt.tabstop = 4
 
 -- NOTE: CUSTOM options
 require("custom.options")
+require("custom.options.autocmd")
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
