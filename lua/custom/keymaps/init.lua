@@ -17,4 +17,6 @@ return {
 	vim.api.nvim_set_keymap("n", "<Leader>cL", ":LspStop<CR>:LspStart<CR>", { desc = "Restart the [L]SP" }),
 	vim.api.nvim_set_keymap("n", "<Leader>ll", ":Lazy<CR>", { desc = "Load [L]azy" }),
 	vim.api.nvim_set_keymap("n", "<Leader>bd", "<CMD>bd<CR>", { desc = "[D]elete buffer" }),
+	vim.api.nvim_set_keymap("n", "<S-h>", "<CMD>bprev<CR>", { desc = "Switch to previous buffer" }),
+	vim.api.nvim_set_keymap("n", "<S-l>", "<CMD>bnext<CR>", { desc = "Switch to next buffer" }),
 }
