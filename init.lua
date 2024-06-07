@@ -633,6 +633,19 @@ require("lazy").setup({
 					end,
 				},
 			})
+
+			vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+				desc = "set dockerfile filetypes",
+				group = vim.api.nvim_create_augroup("dockerfile-types", { clear = true }),
+				pattern = "Dockerfile*",
+				command = "set filetype=dockerfile",
+			})
+			vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+				desc = "set .env filetypes",
+				group = vim.api.nvim_create_augroup("dotenv-types", { clear = true }),
+				pattern = ".env.*",
+				command = "set filetype=sh",
+			})
 		end,
 	},
 
